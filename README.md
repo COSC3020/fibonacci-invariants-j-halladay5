@@ -28,3 +28,9 @@ about the current recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+Invariant:
+A good invarient for fib() that is true at every recursive call, is that the length of fibNums is equal to n of the recursive call.
+From the first recursive call at n = 2, fibNums is [0,1] or length of 2. It hits the base case and calculates fibNums[2], and returns.
+Now the fibNums array has a length of 3 when it returns. So at every recursive call, the "state of the world" is that the length of 
+the calculated fibNum array is always of length of that call.

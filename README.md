@@ -30,7 +30,6 @@ most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
 
 Invariant:
-A good invarient for fib() that is true at every recursive call, is that the length of fibNums is equal to n of the recursive call.
-From the first recursive call at n = 2, fibNums is [0,1] or length of 2. It hits the base case and calculates fibNums[2], and returns.
-Now the fibNums array has a length of 3 when it returns. So at every recursive call, the "state of the world" is that the length of 
-the calculated fibNum array is always of length of that call.
+A good invarient for fib() that is true at the beginning of every recursive call is that fibNums has n correct calculated fibonacci numbers. At recursive call where n =2, fibNums is [0,1],
+two correct fibonacci numbers. It calculates the third number and adds it to the array. When it returns to the n=3 call, it now has 3 correct numbers. At each recursive call, the array has n calculated 
+fibonacci numbers. At the end of each recursive call, it will have n+1 fibonacci values. 

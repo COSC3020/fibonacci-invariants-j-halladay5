@@ -30,6 +30,6 @@ most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
 
 Invariant:
-A good invarient for fib() that is true at the beginning of every recursive call is that fibNums has n correct calculated fibonacci numbers. At recursive call where n =2, fibNums is [0,1],
-two correct fibonacci numbers. It calculates the third number and adds it to the array. When it returns to the n=3 call, it now has 3 correct numbers. At each recursive call, the array has n calculated 
-fibonacci numbers. At the end of each recursive call, it will have n+1 fibonacci values. 
+A good invarient for fib() that is true at the beginning of every recursive call is that fibNums has n-1 fibonacci numbers. At recursive call where n = 2, fibNums has all the elements up to [n-1]. The length of the array
+is n. So at n = 3, fibNums[n] has not been calculated yet, but fibNums[n-1] or fibNums[2] has. When the recursion finishes, fibNums will now have the fibonacci numbers up to n. The last element before it finishes and returns
+to the previous call, is fibNums[n]. For example for n = 4, fibNums = [0,1,1,2]. fibNums[n-1] (fibNums[3]) is 2. The 4th index has not yet been calculated.  
